@@ -18,29 +18,36 @@ Extrem weather-events such as Tornados and Floods can cause human lives. With th
 
 For the US, the Shiny-App on "Exploring Weather Events" allows to visuallize number, impact and location of recorded events. 
 
-![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1-1.png) 
+ 
+<div style='text-align: center;'>
+    <img height='560' src='01.png' />
+</div> 
 
 --- 
 
 ## Event Explorer
-
+   
 The Event-explorer allows to select different event types, one or all years, the number of displayed events and the damage type. A short summary about the number of events and  relative/absolut caused damage provides a brief overview. 
 
 Development over the years can be explored as animation (Play button under slider)
 
-![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2-1.png) 
+<div style='text-align: center;'>
+    <img height='560' src='02.png' />
+</div> 
 
----
+--- 
 
 ## Single Events
 
 Clicking on an Event opens a popup with details about the Event.
 
-![plot of chunk unnamed-chunk-3](assets/fig/unnamed-chunk-3-1.png) 
+<div style='text-align: center;'>
+    <img height='360' src='03.png' />
+</div>
 
---- 
+---  
 
-## Impressum
+##  Impressum
 
 **Data** US National Weather Service [here(PDF-file)](http://www.weather.gov/)
 
