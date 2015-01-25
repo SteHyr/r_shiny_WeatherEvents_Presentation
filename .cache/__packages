@@ -1,0 +1,16 @@
+base
+ggplot2
+bitops
+RCurl
+downloader
+plyr
+shiny
+leaflet
+RColorBrewer
+dplyr
+gtools
+shinyapps
+knitr
+png
+slidify
+htmltools
