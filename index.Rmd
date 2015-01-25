@@ -31,19 +31,42 @@ The Event-explorer allows to select different event types, one or all years, the
 
 Development over the years can be explored as animation (Play button under slider)
 
-<div style='text-align: center;'>
-    <img height='560' src='02.png' />
-</div> 
+Example code for drawing circles in the map, using leaflet. 
+
+```{r,   wrapper=TRUE, eval=FALSE}
+   map$addCircle(
+      dataChunk$lat, 
+      dataChunk$lng,
+      dataChunk$effect,
+      layerId = dataChunk$X,
+      options=list(  
+         stroke = FALSE, fill=TRUE, fillOpacity = .5),
+      eachOptions = list(fillColor = dataChunk$eCol)) 
+```
 
 --- 
 
 ## Single Events
 
-Clicking on an Event opens a popup with details about the Event.
+Clicking on an Event opens a popup with details about the Event. The Boxes are dynamicly created
 
-<div style='text-align: center;'>
-    <img height='360' src='03.png' />
-</div>
+```{r, wrapper=TRUE, eval=FALSE}
+      # create remarks box or info, if no remarks available
+      if (nchar(focusEvent$remark) > 1 ){ 
+         remarksDiv <- tags$div(
+            tags$h5("Remarks"),
+            tags$div( 
+               style="max-height:120px;max-width:300px;border:1px;overflow:auto;",
+               sprintf("%s",focusEvent$remark)))
+      } else { remarksDiv <- tags$h5("no Remarks available") 
+      # create content box
+      content <- as.character(tagList(
+         tags$h5("Event Info"),
+         sprintf("Weather Type: %s", focusEvent$etype ), tags$br(),
+         sprintf("Fatalities: %s", focusEvent$fatalities ), tags$br(),
+         sprintf("Injuries: %s",  focusEvent$injuries ), tags$br(),
+         remarksDiv))
+```
 
 ---  
 
